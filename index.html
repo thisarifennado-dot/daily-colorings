@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free printable coloring pages for kids and adults. Download and print beautiful designs for every age. Creative fun for the whole family!">
+    <meta name="keywords" content="coloring pages, printable coloring pages, free coloring pages, kids coloring, adult coloring">
+    <meta property="og:title" content="Daily Colorings - Free Printable Coloring Pages">
+    <meta property="og:description" content="Discover fun, creative and printable coloring pages for every age.">
+    <meta property="og:image" content="images/logo/logo.png">
+    <meta property="og:url" content="https://daily-colorings.com">
+    <meta name="theme-color" content="#FF6B9D">
+    <title>Daily Colorings - Free Printable Coloring Pages for Kids & Adults</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo/logo.png" alt="Daily Colorings Logo">
+                        <span>Daily Colorings</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <nav class="nav-menu" id="navMenu">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="coloring-pages.html" class="nav-link">Coloring Pages</a>
+                    <a href="categories.html" class="nav-link">Categories</a>
+                    <a href="kids.html" class="nav-link">Kids</a>
+                    <a href="adults.html" class="nav-link">Adults</a>
+                    <a href="holidays.html" class="nav-link">Holidays</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </nav>
+                
+                <!-- Search Icon -->
+                <div class="search-icon">
+                    <a href="#" onclick="openSearch(event)">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal-content">
+            <button class="search-close" onclick="closeSearch()">×</button>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search coloring pages...">
+            <button class="search-btn" onclick="performSearch()">Search</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Free Printable</h1>
+                    <h1 class="hero-highlight">Coloring Pages</h1>
+                    <p class="hero-subheading">for Kids & Adults</p>
+                    <p class="hero-description">
+                        Discover fun, creative and printable coloring pages for every age.
+                        Download and print your favorite designs for free.
+                    </p>
+                    
+                    <div class="hero-search">
+                        <input type="text" placeholder="Search coloring pages..." id="heroSearch">
+                        <button class="search-btn-hero" onclick="performSearch()">Search</button>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="images/hero/hero-coloring.png" alt="Cute cat coloring page illustration with colored pencils">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories Section -->
+    <section class="popular-categories">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <span class="section-icon">🎨</span>
+                    <h2>Popular Categories</h2>
+                </div>
+                <a href="categories.html" class="view-all-link">View All Categories →</a>
+            </div>
+            
+            <div class="categories-grid">
+                <a href="animals.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/animals.png" alt="Free Printable Animal Coloring Pages">
+                    </div>
+                    <h3>Animals</h3>
+                    <p>(245 Pages)</p>
+                </a>
+                
+                <a href="unicorns.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/unicorn.png" alt="Free Printable Unicorn Coloring Pages">
+                    </div>
+                    <h3>Unicorns</h3>
+                    <p>(128 Pages)</p>
+                </a>
+                
+                <a href="dinosaurs.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/dinosaur.png" alt="Free Printable Dinosaur Coloring Pages">
+                    </div>
+                    <h3>Dinosaurs</h3>
+                    <p>(98 Pages)</p>
+                </a>
+                
+                <a href="cars.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/car.png" alt="Free Printable Car Coloring Pages">
+                    </div>
+                    <h3>Cars</h3>
+                    <p>(142 Pages)</p>
+                </a>
+                
+                <a href="flowers.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/flower.png" alt="Free Printable Flower Coloring Pages">
+                    </div>
+                    <h3>Flowers</h3>
+                    <p>(156 Pages)</p>
+                </a>
+                
+                <a href="halloween.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/halloween.png" alt="Free Printable Halloween Coloring Pages">
+                    </div>
+                    <h3>Halloween</h3>
+                    <p>(76 Pages)</p>
+                </a>
+                
+                <a href="christmas.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/christmas.png" alt="Free Printable Christmas Coloring Pages">
+                    </div>
+                    <h3>Christmas</h3>
+                    <p>(102 Pages)</p>
+                </a>
+                
+                <a href="fantasy.html" class="category-card">
+                    <div class="category-image">
+                        <img src="images/categories/fantasy.png" alt="Free Printable Fantasy Coloring Pages">
+                    </div>
+                    <h3>Fantasy</h3>
+                    <p>(84 Pages)</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Groups Section -->
+    <section class="age-groups">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <span class="section-icon">👶</span>
+                    <h2>Choose Coloring Pages by Age</h2>
+                </div>
+                <a href="age-groups.html" class="view-all-link">View All Ages →</a>
+            </div>
+            
+            <div class="age-grid">
+                <a href="toddlers.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/toddler.png" alt="Coloring pages for toddlers ages 2-4">
+                    </div>
+                    <h3>Toddlers</h3>
+                    <p>Ages 2–4</p>
+                </a>
+                
+                <a href="preschool.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/preschool.png" alt="Coloring pages for preschoolers ages 4-6">
+                    </div>
+                    <h3>Preschool</h3>
+                    <p>Ages 4–6</p>
+                </a>
+                
+                <a href="kids.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/kids.png" alt="Coloring pages for kids ages 6-8">
+                    </div>
+                    <h3>Kids</h3>
+                    <p>Ages 6–8</p>
+                </a>
+                
+                <a href="older-kids.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/older-kids.png" alt="Coloring pages for older kids ages 9-12">
+                    </div>
+                    <h3>Older Kids</h3>
+                    <p>Ages 9–12</p>
+                </a>
+                
+                <a href="teens.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/teens.png" alt="Coloring pages for teens ages 13 and up">
+                    </div>
+                    <h3>Teens</h3>
+                    <p>Ages 13+</p>
+                </a>
+                
+                <a href="adults.html" class="age-card">
+                    <div class="age-image">
+                        <img src="images/age-groups/adults.png" alt="Coloring pages for adults all ages">
+                    </div>
+                    <h3>Adults</h3>
+                    <p>All Ages</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Coloring Pages Section -->
+    <section class="popular-pages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <span class="section-icon">⭐</span>
+                    <h2>Popular Coloring Pages</h2>
+                </div>
+                <a href="popular-coloring-pages.html" class="view-all-link">View All Popular →</a>
+            </div>
+            
+            <div class="coloring-pages-grid">
+                <div class="coloring-card">
+                    <a href="cute-cat-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/cute-cat.png" alt="Cute cat coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="cute-cat-coloring-page.html">Cute Cat Coloring Page</a></h3>
+                        <a href="pdf/cute-cat-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="dinosaur-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/dinosaur.png" alt="Dinosaur coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="dinosaur-coloring-page.html">Dinosaur Coloring Page</a></h3>
+                        <a href="pdf/dinosaur-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="princess-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/princess.png" alt="Princess coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="princess-coloring-page.html">Princess Coloring Page</a></h3>
+                        <a href="pdf/princess-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="car-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/car.png" alt="Car coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="car-coloring-page.html">Car Coloring Page</a></h3>
+                        <a href="pdf/car-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="butterfly-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/butterfly.png" alt="Butterfly coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="butterfly-coloring-page.html">Butterfly Coloring Page</a></h3>
+                        <a href="pdf/butterfly-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="sunflower-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/sunflower.png" alt="Sunflower coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="sunflower-coloring-page.html">Sunflower Coloring Page</a></h3>
+                        <a href="pdf/sunflower-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Coloring Pages Section -->
+    <section class="new-pages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <span class="section-icon">🆕</span>
+                    <h2>New Coloring Pages</h2>
+                </div>
+                <a href="new-coloring-pages.html" class="view-all-link">View All New →</a>
+            </div>
+            
+            <div class="coloring-pages-grid">
+                <div class="coloring-card">
+                    <a href="bunny-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/bunny.png" alt="Bunny coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="bunny-coloring-page.html">Bunny Coloring Page</a></h3>
+                        <a href="pdf/bunny-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="baby-elephant-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/baby-elephant.png" alt="Baby elephant coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="baby-elephant-coloring-page.html">Baby Elephant Coloring Page</a></h3>
+                        <a href="pdf/baby-elephant-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="space-rocket-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/space-rocket.png" alt="Space rocket coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="space-rocket-coloring-page.html">Space Rocket Coloring Page</a></h3>
+                        <a href="pdf/space-rocket-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="mermaid-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/mermaid.png" alt="Mermaid coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="mermaid-coloring-page.html">Mermaid Coloring Page</a></h3>
+                        <a href="pdf/mermaid-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="giraffe-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/giraffe.png" alt="Giraffe coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="giraffe-coloring-page.html">Giraffe Coloring Page</a></h3>
+                        <a href="pdf/giraffe-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="coloring-card">
+                    <a href="house-coloring-page.html" class="card-image-link">
+                        <img src="images/coloring-pages/house.png" alt="House coloring page" loading="lazy">
+                    </a>
+                    <div class="card-content">
+                        <h3><a href="house-coloring-page.html">House Coloring Page</a></h3>
+                        <a href="pdf/house-coloring-page.pdf" download class="download-btn">Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal & Holiday Section -->
+    <section class="seasonal-pages">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <span class="section-icon">🎉</span>
+                    <h2>Seasonal & Holiday Coloring Pages</h2>
+                </div>
+                <a href="holidays.html" class="view-all-link">View All Holidays →</a>
+            </div>
+            
+            <div class="seasonal-grid">
+                <a href="halloween.html" class="seasonal-card">
+                    <img src="images/holidays/halloween.png" alt="Halloween coloring pages">
+                    <h3>Halloween</h3>
+                </a>
+                
+                <a href="christmas.html" class="seasonal-card">
+                    <img src="images/holidays/christmas.png" alt="Christmas coloring pages">
+                    <h3>Christmas</h3>
+                </a>
+                
+                <a href="easter.html" class="seasonal-card">
+                    <img src="images/holidays/easter.png" alt="Easter coloring pages">
+                    <h3>Easter</h3>
+                </a>
+                
+                <a href="valentines-day.html" class="seasonal-card">
+                    <img src="images/holidays/valentines-day.png" alt="Valentine's Day coloring pages">
+                    <h3>Valentine's Day</h3>
+                </a>
+                
+                <a href="fall.html" class="seasonal-card">
+                    <img src="images/holidays/fall.png" alt="Fall coloring pages">
+                    <h3>Fall</h3>
+                </a>
+                
+                <a href="spring.html" class="seasonal-card">
+                    <img src="images/holidays/spring.png" alt="Spring coloring pages">
+                    <h3>Spring</h3>
+                </a>
+                
+                <a href="summer.html" class="seasonal-card">
+                    <img src="images/holidays/summer.png" alt="Summer coloring pages">
+                    <h3>Summer</h3>
+                </a>
+                
+                <a href="back-to-school.html" class="seasonal-card">
+                    <img src="images/holidays/back-to-school.png" alt="Back to school coloring pages">
+                    <h3>Back to School</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-icon">💙</span>
+                <h2>Why Choose Our Coloring Pages?</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M24 2v20M12 24h24M24 24v20M2 24h20M6 6l14 14M28 6l14 14M6 42l14-14M28 42l14-14"/>
+                        </svg>
+                    </div>
+                    <h3>Free to Download</h3>
+                    <p>No subscription required. All coloring pages are completely free!</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="40" height="40" rx="2"></rect>
+                            <line x1="14" y1="14" x2="34" y2="14"></line>
+                            <line x1="14" y1="24" x2="34" y2="24"></line>
+                            <line x1="14" y1="34" x2="24" y2="34"></line>
+                        </svg>
+                    </div>
+                    <h3>Print Ready</h3>
+                    <p>High-quality printable pages perfect for home or classroom use.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M24 4C13.5 4 5 12.5 5 23c0 5 2 9.5 5 13l-3 8 8-3c3.5 2.5 8 4 13 4 10.5 0 19-8.5 19-19S34.5 4 24 4z"></path>
+                        </svg>
+                    </div>
+                    <h3>Kids & Adults</h3>
+                    <p>Designs for every age, from toddlers to adults. Something for everyone!</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 30l8-16 8 16M12 24h12M30 8v24M34 12h8v16h-8"></path>
+                        </svg>
+                    </div>
+                    <h3>Easy PDF Downloads</h3>
+                    <p>Download and print in seconds. One click and you're ready to color!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Helpful Resources Section -->
+    <section class="helpful-resources">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-icon">📚</span>
+                <h2>Helpful Coloring Resources</h2>
+            </div>
+            
+            <div class="resources-grid">
+                <a href="how-to-print-coloring-pages.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M28 4H4c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 20c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm8 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm8 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>How to Print Coloring Pages</h3>
+                    <p>Step-by-step guide to printing perfect coloring pages at home.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="best-paper-for-coloring-pages.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M26 2H6C4.9 2 4 2.9 4 4v24c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM10 20H6v-2h4v2zm10 0H16v-2h4v2zm-4-8H6v-2h10v2zm6-4H6V6h20v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Best Paper for Coloring Pages</h3>
+                    <p>Recommendations for the best paper types and weights.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="coloring-activities-for-kids.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm6 16h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z"/>
+                        </svg>
+                    </div>
+                    <h3>Coloring Activities for Kids</h3>
+                    <p>Fun activities and games to enhance coloring time.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="easy-coloring-ideas-for-preschoolers.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm-4 20h8v2h-8v-2zm0-8h8v2h-8v-2zm0-8h8v2h-8v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Easy Coloring Ideas for Preschoolers</h3>
+                    <p>Simple coloring ideas perfect for young learners.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="benefits-of-coloring-for-children.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm-2 20h4v2h-4v-2zm0-8h4v2h-4v-2zm0-8h4v2h-4v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Benefits of Coloring for Children</h3>
+                    <p>Discover the cognitive and developmental benefits of coloring.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+                
+                <a href="coloring-pages-for-classroom.html" class="resource-card">
+                    <div class="resource-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M28 4H4c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 24H4v-4h4v4zm8 0h-4v-4h4v4zm8 0h-4v-4h4v4zm4-20v4H4V4h24z"/>
+                        </svg>
+                    </div>
+                    <h3>Coloring Pages for Classroom Activities</h3>
+                    <p>How to use coloring pages as educational tools in the classroom.</p>
+                    <span class="resource-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-icon">❓</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Are these coloring pages free?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! All coloring pages on Daily Colorings are completely free to download and print. No subscription or payment is required.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can I print the coloring pages at home?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! All our coloring pages are print-ready PDFs designed for home printing. Simply download the PDF and print it on your home printer.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What paper size should I use?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our coloring pages are designed for standard 8.5" x 11" (letter size) paper, which is the most common size. You can also print on larger sizes like 11" x 17" if your printer supports it.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Are coloring pages suitable for kids?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We have coloring pages for all ages, from toddlers (2-4) to adults. Each page is age-appropriate with designs suited to different skill levels.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Can teachers use these coloring pages?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Teachers can freely use our coloring pages for classroom activities. They're perfect for educational fun, creative breaks, and artistic expression in the classroom.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need to create an account?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No! You don't need to create an account to download coloring pages. Just click the download button and save the PDF directly to your computer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional AdSense Ad Area -->
+    <!-- <section class="ad-section">
+        <div class="container">
+            <!-- Optional AdSense Ad Area -->
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="images/logo/logo.png" alt="Daily Colorings Logo">
+                        <h3>Daily Colorings</h3>
+                    </div>
+                    <p class="footer-tagline">Color Your World • Be Creative • Have Fun</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Coloring Pages</h4>
+                    <ul>
+                        <li><a href="animals.html">Animals</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="adults.html">Adults</a></li>
+                        <li><a href="holidays.html">Holidays</a></li>
+                        <li><a href="categories.html">Educational</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.937-.2-2.378.042-3.41.216-.937 1.402-5.938 1.402-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.18 0 1.026.339 2.122.764 2.72.084.1.1.191.074.292-.081.344-.266 1.068-.309 1.216-.036.151-.118.183-.273.11-1.522-.756-2.472-3.128-2.472-5.036 0-3.77 2.735-7.235 7.883-7.235 4.138 0 7.347 2.95 7.347 6.893 0 4.112-2.593 7.417-6.188 7.417-1.21 0-2.35-.631-2.74-1.378l-.747 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12 6.615 2.25 12 2.25zm3.935 3.565a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM12 7c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5 2.243-5 5-5zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
+                            </svg>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.441 15.892c-2.102.144-6.784.144-8.883 0C5.282 15.749 5.017 14.41 5 12c.017-2.41.282-3.749.558-4.108 2.099-.144 6.782-.144 8.883 0 .276.359.541 1.698.558 4.108-.017 2.41-.282 3.749-.558 4.108zm-7.441-7.142v4.5L9.5 11.75l-0.5-2.5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Daily Colorings. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-conditions.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
